@@ -18,9 +18,14 @@ Children see whatever is in this file, so be careful and always show Muneef the 
 ```jsonc
 {
   "schema": 1,                 // never change
-  "updated": "2026-11-16",     // set to today's date whenever you edit
-  "featured": ["id", "id", "id"], // the hero cards on Home, in order (1–5, usually 3)
-  "latest": ["id", ...],       // the "Latest" row and search order, newest first
+  "updated": "2026-11-17",     // set to today's date whenever you edit
+  "series": [                  // every series in allowed.json, in the order the app shows them
+    { "slug": "little-village", "show": true },
+    { "slug": "deeds", "show": false } // hidden: the series AND all its episodes disappear from the app
+  ],
+  "layout": { ... },           // how Home and Search look, see "Changing what the app shows"
+  "featured": ["id", "id", "id"], // the hero cards under the heading on Home, in order (1–5, usually 3)
+  "latest": ["id", ...],       // the "New stories" row and search order, newest first
   "episodes": [ { ...episode }, ... ]
 }
 ```
@@ -84,9 +89,38 @@ Read a few existing episodes in the same series first and match them.
   wording and source. Use the phrases as the stories do (Bismillah, Alhamdulillah, InshaAllah, MashaAllah, SubhanAllah, salam).
 - Arabic series titles and text stay in Arabic, written by Muneef. Don't translate or write Arabic yourself.
 
+## Changing what the app shows
+
+Everything below is in `stories.json` and reaches the app without a store update.
+
+**Hero cards** (the big cards under "What story shall we watch?"): `featured`, 1–5 episode ids in order.
+
+**Series row and which series exist in the app:** `series`. Order = order on Home. `"show": false` hides the series and
+all its episodes everywhere (Home, Search, Stickers, Watch next). Keep hidden episodes in the file so they can come back by switching `show` to `true`.
+
+**Home heading and sections:** `layout`.
+
+```jsonc
+"layout": {
+  "heading": "What story shall we watch?",   // the line above the hero cards (max 40 characters)
+  "sections": [                             // shown in this order under the hero cards (1–12)
+    { "type": "series", "title": "Series" },                       // the series row
+    { "type": "latest", "title": "New stories", "count": 8 },      // first `count` (1–20) from "latest"
+    { "type": "list", "title": "Ramadan stories", "stories": ["id", "id"] }, // a row you pick by hand (1–20)
+    { "type": "watchNext", "title": "Watch next" },                // each child's own next stories (automatic)
+    { "type": "values", "title": "Stories about…", "values": ["kindness", "honesty"] } // value buttons
+  ],
+  "popular": ["id", ...],    // "Popular stories" in Search, in order (0–10)
+  "searchValues": []         // value buttons in Search, in order; [] shows all
+}
+```
+
+- Any section can have `"show": false` to hide it without deleting it.
+- Titles: max 40 characters, same house style (short, warm, no emojis).
+- Episodes in a hidden series can't be used in `featured`, `popular` or a `list` section (the check will say so).
+
 ## Other changes
 
-- **Hero cards:** edit `featured`. Released episodes only.
 - **Removing a story:** take it out of `episodes`, `latest` and `featured`. It disappears from the app on the next refresh.
 - **Fixing a typo:** edit the text, update `updated`, validate, show the change, push.
 

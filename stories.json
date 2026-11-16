@@ -1,6 +1,69 @@
 {
   "schema": 1,
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
+  "series": [
+    {
+      "slug": "little-village",
+      "show": true
+    },
+    {
+      "slug": "zaynab",
+      "show": true
+    },
+    {
+      "slug": "zizi",
+      "show": true
+    },
+    {
+      "slug": "deeds",
+      "show": false
+    },
+    {
+      "slug": "arabic",
+      "show": false
+    }
+  ],
+  "layout": {
+    "heading": "What story shall we watch?",
+    "sections": [
+      {
+        "type": "series",
+        "title": "Series"
+      },
+      {
+        "type": "latest",
+        "title": "New stories",
+        "count": 8
+      },
+      {
+        "type": "watchNext",
+        "title": "Watch next"
+      },
+      {
+        "type": "values",
+        "title": "Stories about…",
+        "values": [
+          "kindness",
+          "honesty",
+          "patience",
+          "gratitude",
+          "sharing",
+          "salam",
+          "feelings",
+          "friendship"
+        ]
+      }
+    ],
+    "popular": [
+      "sUMAWWsJ-v4",
+      "CEZHfol98QI",
+      "AZK5Y_suBYE",
+      "XJPaCNhJ8PY",
+      "lVXrH_VkPes",
+      "UZl1GN-WZkk"
+    ],
+    "searchValues": []
+  },
   "featured": [
     "sUMAWWsJ-v4",
     "XmLsiGCJm-8",
