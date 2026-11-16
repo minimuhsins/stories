@@ -126,7 +126,7 @@ for (const list of ['featured', 'latest']) {
   if (list === 'featured') for (const id of v) if (ids.has(id) && !visible(id)) err(`"featured" mentions ${id}, which is in a hidden series`);
 }
 if (Array.isArray(data.featured)) {
-  if (data.featured.length < 1 || data.featured.length > 5) err('"featured" (the hero cards) must have 1–5 episodes');
+  if (data.featured.length < 1 || data.featured.length > 8) err('"featured" (the hero cards) must have 1–8 episodes');
   const now = Date.now();
   for (const id of data.featured) {
     const e = eps.find((x) => x.id === id);

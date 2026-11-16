@@ -24,7 +24,7 @@ Children see whatever is in this file, so be careful and always show Muneef the 
     { "slug": "deeds", "show": false } // hidden: the series AND all its episodes disappear from the app
   ],
   "layout": { ... },           // how Home and Search look, see "Changing what the app shows"
-  "featured": ["id", "id", "id"], // the hero cards under the heading on Home, in order (1–5, usually 3)
+  "featured": ["id", "id", "id"], // the hero cards under the heading on Home, in order (1–8)
   "latest": ["id", ...],       // the "New stories" row and search order, newest first
   "episodes": [ { ...episode }, ... ]
 }
@@ -58,7 +58,7 @@ An episode:
    public, read its title and description to write the summary.
 2. Add the episode to the end of `episodes`, written in the house style below.
 3. Put its id at the **start** of `latest`.
-4. If asked, put it in `featured` (the hero cards). Keep 3 hero cards unless Muneef says otherwise.
+4. If asked, put it in `featured` (the hero cards). Keep the number of hero cards the same unless Muneef says otherwise.
 5. Set `updated` to today's date.
 6. Run `node scripts/validate.mjs` and fix any problems.
 7. Show Muneef the new entry and wait for his OK before you commit and push to `main`.
@@ -93,7 +93,7 @@ Read a few existing episodes in the same series first and match them.
 
 Everything below is in `stories.json` and reaches the app without a store update.
 
-**Hero cards** (the big cards under "What story shall we watch?"): `featured`, 1–5 episode ids in order.
+**Hero cards** (the big cards under "What story shall we watch?"): `featured`, 1–8 episode ids in order.
 
 **Series row and which series exist in the app:** `series`. Order = order on Home. `"show": false` hides the series and
 all its episodes everywhere (Home, Search, Stickers, Watch next). Keep hidden episodes in the file so they can come back by switching `show` to `true`.
