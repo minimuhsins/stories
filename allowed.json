@@ -1,0 +1,42 @@
+{
+  "series": [
+    {
+      "slug": "little-village",
+      "name": "The Little Village"
+    },
+    {
+      "slug": "zaynab",
+      "name": "The Adventures of Zaynab"
+    },
+    {
+      "slug": "zizi",
+      "name": "Zizi & Friends"
+    },
+    {
+      "slug": "deeds",
+      "name": "Little Deeds, Big Hearts"
+    },
+    {
+      "slug": "arabic",
+      "name": "Arabic Stories"
+    }
+  ],
+  "values": [
+    "kindness",
+    "honesty",
+    "patience",
+    "gratitude",
+    "sharing",
+    "manners",
+    "salam",
+    "mercy",
+    "feelings",
+    "effort",
+    "friendship",
+    "helping",
+    "caring",
+    "moderation",
+    "humility",
+    "allah"
+  ]
+}

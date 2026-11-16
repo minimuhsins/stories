@@ -1,0 +1,47 @@
+# Checks stories.json and publishes it to https://minimuhsins.github.io/stories/stories.json
+# If the check fails, nothing is published and the app keeps the last good list.
+name: Publish stories
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check stories.json
+        run: node scripts/validate.mjs
+      - name: Prepare site
+        run: |
+          mkdir _site
+          cp stories.json _site/
+          printf '<!doctype html><meta charset="utf-8"><title>MiniMuhsins app stories</title><p>Story list for the MiniMuhsins app.</p>\n' > _site/index.html
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+
+  publish:
+    if: github.event_name != 'pull_request'
+    needs: check
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}stories.json
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
