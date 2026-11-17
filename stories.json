@@ -1356,29 +1356,6 @@
         },
         "remember": "I am kind to animals, big and small."
       }
-    },
-    {
-      "id": "LpYLr7BvNUM",
-      "series": "little-village",
-      "ep": 4,
-      "title": "Alert test",
-      "summary": "A short test entry to check new-story alerts. It will be removed shortly.",
-      "values": [
-        "kindness"
-      ],
-      "guide": {
-        "before": "Ask: test.",
-        "talk": [
-          "Test question one?",
-          "Test question two?"
-        ],
-        "activity": {
-          "title": "Test",
-          "text": "This is a temporary test entry."
-        },
-        "remember": "Test."
-      },
-      "release": "2026-11-17T15:15:00+13:00"
     }
   ]
 }
