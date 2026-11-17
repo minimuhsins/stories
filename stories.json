@@ -74,6 +74,7 @@
     "PaVZEhX26_o"
   ],
   "latest": [
+    "A7fapIIiOCc",
     "xi1k-qzdW44",
     "sUMAWWsJ-v4",
     "QWDBZI_4ARk",
@@ -1329,6 +1330,31 @@
           "text": "Pick one helping job each day this week, like setting the table or tidying toys, and add a sticker to a chart when it's done."
         },
         "remember": "Helping at home is a good deed."
+      }
+    },
+    {
+      "id": "A7fapIIiOCc",
+      "series": "little-village",
+      "ep": 3,
+      "title": "Alaya and the Thirsty Little Bird",
+      "summary": "On a hot explorer day, Alaya and Zaynab find a little bird panting under a bush. With an acorn cup, careful steps and lots of patience, they discover that kindness to even the smallest creature matters.",
+      "values": [
+        "mercy",
+        "kindness",
+        "patience"
+      ],
+      "guide": {
+        "before": "Ask: how do you think animals feel on a very hot day?",
+        "talk": [
+          "What clues helped Alaya and Zaynab realise the bird was thirsty?",
+          "Why did Alaya take slower steps the second time she carried the water?",
+          "What's one small thing we could do to care for the animals near our home?"
+        ],
+        "activity": {
+          "title": "Bird water dish",
+          "text": "With a grown-up, set out a shallow dish of fresh water for birds, with a few clean pebbles to perch on. Check it together each day and top it up."
+        },
+        "remember": "I am kind to animals, big and small."
       }
     }
   ]
