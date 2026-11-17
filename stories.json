@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "series": [
     {
       "slug": "little-village",
@@ -74,6 +74,7 @@
     "PaVZEhX26_o"
   ],
   "latest": [
+    "qawffEphpEI",
     "A7fapIIiOCc",
     "xi1k-qzdW44",
     "sUMAWWsJ-v4",
@@ -1355,6 +1356,32 @@
           "text": "With a grown-up, set out a shallow dish of fresh water for birds, with a few clean pebbles to perch on. Check it together each day and top it up."
         },
         "remember": "I am kind to animals, big and small."
+      }
+    },
+    {
+      "id": "qawffEphpEI",
+      "series": "little-village",
+      "ep": 4,
+      "release": "2026-11-20T00:00:00+13:00",
+      "title": "Uncle Hadi's Story Time: The Little Ant",
+      "summary": "Maryam and Haya race to Uncle Hadi's garden and nearly step on a tiny anthill. At story time, Uncle Hadi tells them about a brave little ant from the Qur'an who looked out for her whole colony.",
+      "values": [
+        "caring",
+        "kindness",
+        "helping"
+      ],
+      "guide": {
+        "before": "Ask: have you ever seen ants marching in a line?",
+        "talk": [
+          "Why did the little ant call out to the other ants?",
+          "How did the pebble circle help Maryam and Haya look out for the ants?",
+          "Who could you look out for today, and how could you help?"
+        ],
+        "activity": {
+          "title": "Ant watch",
+          "text": "With a grown-up, find an ant trail outside and quietly watch where the ants go, without touching or blocking their path. Then place a little circle of pebbles or leaves around their tiny home so others notice it, like Maryam and Haya."
+        },
+        "remember": "I look out for others, even the smallest ones."
       }
     }
   ]
