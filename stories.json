@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-11-18",
+  "updated": "2026-11-21",
   "series": [
     {
       "slug": "little-village",
@@ -74,6 +74,7 @@
     "PaVZEhX26_o"
   ],
   "latest": [
+    "aEs285cUqiU",
     "qawffEphpEI",
     "A7fapIIiOCc",
     "xi1k-qzdW44",
@@ -1382,6 +1383,32 @@
           "text": "With a grown-up, find an ant trail outside and quietly watch where the ants go, without touching or blocking their path. Then place a little circle of pebbles or leaves around their tiny home so others notice it, like Maryam and Haya."
         },
         "remember": "I look out for others, even the smallest ones."
+      }
+    },
+    {
+      "id": "aEs285cUqiU",
+      "series": "little-village",
+      "ep": 5,
+      "release": "2026-11-27T00:00:00+13:00",
+      "title": "Zaynab and the Wobbly Plank",
+      "summary": "Maryam bounces across the village bridge without noticing a loose plank and a sharp nail. Zaynab stops, thinks of who might get hurt, and knows just who to ask for help.",
+      "values": [
+        "kindness",
+        "helping",
+        "caring"
+      ],
+      "guide": {
+        "before": "Ask: have you ever seen something on the path that someone could trip over?",
+        "talk": [
+          "What did Zaynab notice that Maryam missed?",
+          "Why did the girls ask Uncle Bilal for help instead of fixing it themselves?",
+          "Why is a good deed still worth doing when nobody sees it?"
+        ],
+        "activity": {
+          "title": "Clear the path",
+          "text": "Walk around the house together and put away toys, shoes or books that someone might trip over. Practise telling a grown-up straight away if you ever see something broken or sharp."
+        },
+        "remember": "I help make the path safe, and Allah sees the good I do."
       }
     }
   ]
