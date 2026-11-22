@@ -51,6 +51,7 @@ An episode:
 ```
 
 `review` and `thumb` are left over from the website and the app ignores them. Keep them where they already exist.
+`cover` is the optional title-free hero picture (see "Hero cover pictures").
 
 ## Adding a new episode
 
@@ -74,6 +75,18 @@ An episode:
   an episode after it has refreshed the list, so **add scheduled episodes at least 1–2 days early.**
 - An episode added with no `release` (or a past one) is playable straight away. Phones that find it during a
   background refresh also show a "new story" notification.
+- Ask Muneef to schedule new videos as a **Premiere**. A plain scheduled upload stays private, so YouTube
+  has no thumbnail for it and the "coming soon" card is blank.
+
+### Hero cover pictures
+
+Hero cards should show a picture **without the title on it** (the app writes the title and series name over it).
+Episodes without one use their usual picture, which may have the title on it.
+
+1. Get the title-free artwork from Muneef (16:9, e.g. 1920×1080).
+2. Save it as `covers/<id>.webp`, 1280×720, aiming for under 150 KB (WebP quality around 70–80).
+3. Add `"cover": "covers/<id>.webp"` to that episode. The check makes sure the file exists.
+4. Covers are published next to `stories.json` and only appear in the hero cards (app version 1.0.2 and later).
 
 ## House style
 
@@ -128,5 +141,5 @@ all its episodes everywhere (Home, Search, Stickers, Watch next). Keep hidden ep
 
 - Never add videos that aren't from the MiniMuhsins YouTube channel.
 - Never add links, web addresses or contact details to any text.
-- Never change `schema`, `allowed.json` or the publish workflow without Muneef asking.
+- Never change `schema`, `allowed.json` or the publish workflow without Muneef asking. (He asked for the covers folder to be published, 22 Nov 2026.)
 - Never push to `main` without running the check and getting Muneef's OK.

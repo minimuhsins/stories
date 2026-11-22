@@ -31,6 +31,7 @@ jobs:
         run: |
           mkdir _site
           cp stories.json _site/
+          if [ -d covers ]; then cp -r covers _site/; fi
           printf '<!doctype html><meta charset="utf-8"><title>MiniMuhsins app stories</title><p>Story list for the MiniMuhsins app.</p>\n' > _site/index.html
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'

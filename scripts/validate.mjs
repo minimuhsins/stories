@@ -2,7 +2,7 @@
 // Checks stories.json before it is published. The app also checks it, but a bad
 // file should never reach children's phones, so GitHub refuses to publish if this fails.
 // Usage: node scripts/validate.mjs [path-to-stories.json]
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -62,8 +62,14 @@ eps.forEach((e, i) => {
   if (e.release !== undefined) {
     if (!ISO_TZ.test(e.release) || isNaN(new Date(e.release).getTime())) err(`${at}: "release" must look like 2026-12-01T17:00:00+13:00`);
   }
+  if (e.cover !== undefined) {
+    // A title-free picture for the hero cards, kept in covers/ and published next to stories.json
+    if (typeof e.cover !== 'string' || !/^covers\/[A-Za-z0-9_-]+\.(webp|jpg|png)$/.test(e.cover)) err(`${at}: "cover" must look like covers/${e.id}.webp`);
+    else if (!existsSync(join(root, e.cover))) err(`${at}: "cover" file ${e.cover} isn't in the covers folder`);
+    else if (statSync(join(root, e.cover)).size > 250 * 1024) warn(`${at}: ${e.cover} is over 250 KB; make it smaller so it loads quickly`);
+  }
   if (e.review !== undefined && typeof e.review !== 'boolean') err(`${at}: "review" must be true or false`);
-  const known = new Set(['id', 'series', 'ep', 'title', 'summary', 'values', 'guide', 'release', 'review', 'thumb']);
+  const known = new Set(['id', 'series', 'ep', 'title', 'summary', 'values', 'guide', 'release', 'review', 'thumb', 'cover']);
   for (const k of Object.keys(e)) if (!known.has(k)) warn(`${at}: unknown field "${k}" will be ignored by the app`);
 });
 
